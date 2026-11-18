@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Administrator Sign In — ONLYUSLABS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/admin.css">
+<style>
+.auth-login-body{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:#f4f3ef}
+.auth-login-shell{width:min(430px,calc(100% - 50px));margin:auto;padding:35px 0}
+.auth-kicker{margin-top:65px;font:10px 'DM Mono',monospace;letter-spacing:1.35px;color:#557b70}
+.auth-login-shell h1{font:700 49px/1.04 'Manrope',sans-serif;letter-spacing:-2.6px;margin:19px 0 12px}
+.auth-login-shell h1 em{font-family:Georgia,serif;font-weight:400;color:#557b70}
+.auth-login-shell>p{color:#778078;font-size:13px;max-width:320px;line-height:1.8}
+.auth-form{margin-top:30px}
+.auth-form label{display:block;font-size:11px;font-weight:700;color:#5b665d;margin-bottom:16px}
+.auth-form input{display:block;width:100%;margin-top:8px;border:1px solid #dce1da;background:#fff;border-radius:7px;padding:13px;outline:none;color:#171b18;font:13px 'DM Sans',sans-serif}
+.auth-form input:focus{border-color:#557b70;box-shadow:0 0 0 3px #557b7015}
+.auth-submit{width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:8px;background:#171b18;color:#fff;border:0;padding:14px 17px;font-size:12px;font-weight:600;cursor:pointer}
+.auth-submit:hover{background:#557b70}.auth-submit:disabled{opacity:.6;cursor:wait}
+.auth-message{display:none;padding:12px 13px;margin:0 0 15px;border-radius:6px;font-size:11px;line-height:1.6}
+.auth-message.error{display:block;background:#faeae7;color:#a3473a}
+.auth-message.info{display:block;background:#e8f0e8;color:#3f6c51}
+.auth-foot{margin-top:23px;font-size:10px;color:#8b958c}
+.auth-side{background:#202922;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:42px;color:#e9eee7}
+.auth-side:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:60px 60px}
+.auth-side-label{position:relative;font:9px 'DM Mono',monospace;letter-spacing:1.4px;color:#a5b4a6}
+.auth-side-art{position:relative;display:grid;place-items:center}
+.auth-side-art img{width:min(90%,520px);filter:drop-shadow(0 20px 20px #0004)}
+.auth-side-caption{position:relative;font:500 24px/1.25 'Manrope',sans-serif;letter-spacing:-.7px;max-width:380px}
+.auth-brand{display:flex;align-items:center;gap:12px;font:800 16px 'Manrope',sans-serif;letter-spacing:.8px;color:#171b18;text-decoration:none}
+.auth-brand .brand-mark{width:34px;height:34px;border:1px solid #171b18;border-radius:50%;display:grid;place-items:center;font:700 19px 'Manrope',sans-serif;position:relative}
+.auth-brand .brand-mark:after{content:"";position:absolute;width:7px;height:7px;background:#557b70;border-radius:50%;right:-2px;top:1px;border:2px solid #f4f3ef}
+.auth-brand small{display:block;font:9px 'DM Mono',monospace;letter-spacing:1.5px;color:#879187;margin-top:3px}
+.auth-back{display:inline-block;margin-top:22px;font-size:11px;color:#727c73;text-decoration:none}
+@media(max-width:760px){.auth-login-body{grid-template-columns:1fr}.auth-side{display:none}.auth-login-shell{padding:30px 0}.auth-kicker{margin-top:45px}.auth-login-shell h1{font-size:43px}}
+</style>
+</head>
+<body class="auth-login-body">
+<main class="auth-login-shell">
+<a class="auth-brand" href="/"><span class="brand-mark">O</span><span>ONLYUS<span style="color:#557b70">LABS</span><small>INTELLIGENCE BEHIND BETTER BUSINESS</small></span></a>
+<div class="auth-kicker">PRIVATE ADMINISTRATION / SECURE ACCESS</div>
+<h1>Welcome<br><em>back.</em></h1>
+<p>Sign in to access the ONLYUSLABS administration workspace.</p>
+<div id="authMessage" class="auth-message" role="status" aria-live="polite"></div>
+<form id="adminLoginForm" class="auth-form">
+<label>Email address<input id="adminEmail" name="email" type="email" autocomplete="username" value="cheggexpertshiva@gmail.com" required></label>
+<label>Password<input id="adminPassword" name="password" type="password" autocomplete="current-password" required></label>
+<button class="auth-submit" id="adminLoginButton" type="submit"><span>Sign in securely</span><span>↗</span></button>
+</form>
+<a class="auth-back" href="/">← Return to website</a>
+<div class="auth-foot">ONLYUSLABS · ADMINISTRATOR ACCESS</div>
+</main>
+<aside class="auth-side">
+<div class="auth-side-label">ONLYUSLABS / INTELLIGENCE ARCHITECTURE</div>
+<div class="auth-side-art"><img src="/assets/images/intelligence-sculpture.svg" alt="ONLYUSLABS geometric sculpture"></div>
+<div class="auth-side-caption">Clarity in every process.<br>Precision in every decision.</div>
+</aside>
+<script type="module" src="/assets/js/admin-login.js"></script>
+</body>
+</html>
